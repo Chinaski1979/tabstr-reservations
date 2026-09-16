@@ -1,0 +1,99 @@
+{
+  "language": {
+    "label": "Idioma",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "landing": {
+    "eyebrow": "Reservas para restaurantes",
+    "title": "Una mesa lista para ti",
+    "askTitle": "¿Vienes a reservar?",
+    "askBody": "Cada restaurante tiene su propio enlace de reserva, y esta página no es ninguno de ellos. Pídele el enlace al restaurante por WhatsApp, o búscalo en sus redes sociales.",
+    "howTitle": "Cómo funciona",
+    "step1Title": "Elige fecha y hora",
+    "step1Body": "Ves la disponibilidad real del restaurante y escoges el horario que te sirve.",
+    "step2Title": "Deja tus datos",
+    "step2Body": "Tu nombre, un teléfono si quieres, y cualquier alergia o detalle que debamos saber.",
+    "step3Title": "Queda confirmada",
+    "step3Body": "La mesa se registra al instante. Sin cuentas, sin contraseñas, sin esperas.",
+    "footnote": "Reservar es gratis para los comensales y no requiere crear una cuenta."
+  },
+  "notFound": {
+    "title": "Esta página no existe",
+    "body": "Revisa el enlace que te compartieron. Cada restaurante tiene su propia dirección de reserva.",
+    "home": "Ir al inicio"
+  },
+  "orgNotFound": {
+    "eyebrow": "No disponible",
+    "title": "No encontramos este restaurante",
+    "body": "El enlace puede estar incompleto o haber cambiado. Pídele al restaurante que te lo comparta de nuevo.",
+    "cta": "Saber más"
+  },
+  "availabilityError": {
+    "eyebrow": "Sin conexión",
+    "title": "No pudimos cargar la disponibilidad",
+    "retry": "Reintentar"
+  },
+  "hours": {
+    "openAllDay": "Abierto las 24 horas",
+    "openFromTo": "Abierto de {opens} a {closes}"
+  },
+  "reserve": {
+    "stepDate": "Elige la fecha",
+    "stepPax": "¿Cuántas personas?",
+    "stepTime": "Elige la hora",
+    "stepDetails": "Tus datos",
+    "slotFilled": "Ese horario acaba de llenarse. Elige otro.",
+    "loading": "Cargando disponibilidad"
+  },
+  "date": {
+    "today": "Hoy"
+  },
+  "pax": {
+    "hint": "La disponibilidad cambia según el tamaño del grupo.",
+    "decrease": "Quitar una persona",
+    "increase": "Agregar una persona",
+    "one": "1 persona",
+    "other": "{count} personas"
+  },
+  "slots": {
+    "empty": "No quedan horarios para este día.",
+    "fullDay": "Este día está lleno para el tamaño de tu grupo. Prueba con otra fecha o con menos personas.",
+    "noRemaining": "Sin cupo",
+    "remaining": "Quedan {count}"
+  },
+  "form": {
+    "name": "Nombre",
+    "nameError": "Escribe tu nombre para continuar.",
+    "namePlaceholder": "Ana Rodríguez",
+    "phone": "Teléfono (opcional)",
+    "phonePlaceholder": "8888 8888",
+    "notes": "Alergias o notas (opcional)",
+    "notesPlaceholder": "Sin maní, mesa tranquila, celebramos un cumpleaños…",
+    "summary": "Tu reserva",
+    "submit": "Confirmar reserva",
+    "submitting": "Confirmando…"
+  },
+  "success": {
+    "title": "Reserva confirmada",
+    "waiting": "{name}, te esperamos en {restaurant}.",
+    "date": "Fecha",
+    "time": "Hora",
+    "pax": "Personas",
+    "hint": "Guarda esta pantalla o toma una captura. Si necesitas cambiar algo, escribe directamente al restaurante.",
+    "another": "Hacer otra reserva"
+  },
+  "errors": {
+    "generic": "Algo salió mal. Intenta de nuevo.",
+    "organization_not_found": "No encontramos este restaurante.",
+    "invalid_customer_name": "Escribe tu nombre para continuar.",
+    "invalid_pax": "La cantidad de personas no es válida.",
+    "starts_at_in_the_past": "Ese horario ya pasó. Elige otro.",
+    "invalid_starts_at": "Ese horario no es válido. Elige otro.",
+    "outside_hours": "Ese horario está fuera del horario de atención.",
+    "capacity_exceeded": "Ya no hay cupo a esa hora. Elige otro horario.",
+    "invalid_range": "Las fechas no son válidas.",
+    "range_too_large": "El rango de fechas es demasiado amplio.",
+    "invalid_timezone": "Este restaurante no tiene zona horaria configurada. No podemos mostrar horarios."
+  }
+}

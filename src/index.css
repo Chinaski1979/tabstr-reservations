@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/inter";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Ink is the room, gold is the action, terracotta is the spice. */
+:root {
+  --ink: #191b1c;
+  --gold: #deac41;
+  --terracotta: #a7401d;
+  --off-white: #f3ece1;
+
+  --background: var(--ink);
+  --foreground: var(--off-white);
+  --card: #202324;
+  --card-foreground: var(--off-white);
+  --popover: #202324;
+  --popover-foreground: var(--off-white);
+  --primary: var(--gold);
+  --primary-foreground: var(--ink);
+  --secondary: #24282a;
+  --secondary-foreground: var(--off-white);
+  --muted: #24282a;
+  --muted-foreground: #a89f92;
+  --accent: var(--terracotta);
+  --accent-foreground: #f7ece3;
+  --destructive: var(--terracotta);
+  --border: #2f3335;
+  --input: #34393b;
+  --ring: var(--gold);
+  --radius: 0.625rem;
+
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-sans: "Geist Variable", system-ui, sans-serif;
+  --font-display: "Inter Variable", system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/*
+ * Type utilities. They never set `font-size`, because a Tailwind size class
+ * always wins the cascade against them and `cn` would drop any `text-`
+ * prefixed name as a text-color conflict. Pair each one with a `text-*` size.
+ */
+
+/* Titles. Inter at a medium weight, with tight tracking at display size. */
+@utility serif-display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Smaller Inter headings, a step heavier so they still carry the section. */
+@utility serif-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Micro all-caps eyebrows that carry hierarchy without another type size. */
+@utility eyebrow {
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}

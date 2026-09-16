@@ -1,0 +1,99 @@
+{
+  "language": {
+    "label": "Language",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "landing": {
+    "eyebrow": "Restaurant reservations",
+    "title": "A table waiting for you",
+    "askTitle": "Here to book?",
+    "askBody": "Each restaurant has its own booking link, and this page is not one of them. Ask the restaurant for the link on WhatsApp, or look for it on their social media.",
+    "howTitle": "How it works",
+    "step1Title": "Pick a date and time",
+    "step1Body": "You see the restaurant’s real availability and choose the slot that works for you.",
+    "step2Title": "Leave your details",
+    "step2Body": "Your name, a phone number if you like, and any allergies or notes we should know.",
+    "step3Title": "You’re confirmed",
+    "step3Body": "The table is held right away. No accounts, no passwords, no waiting.",
+    "footnote": "Booking is free for guests and does not require an account."
+  },
+  "notFound": {
+    "title": "This page doesn’t exist",
+    "body": "Check the link you were sent. Each restaurant has its own booking address.",
+    "home": "Back home"
+  },
+  "orgNotFound": {
+    "eyebrow": "Unavailable",
+    "title": "We couldn’t find this restaurant",
+    "body": "The link may be incomplete or may have changed. Ask the restaurant to share it again.",
+    "cta": "Learn more"
+  },
+  "availabilityError": {
+    "eyebrow": "Offline",
+    "title": "We couldn’t load availability",
+    "retry": "Try again"
+  },
+  "hours": {
+    "openAllDay": "Open 24 hours",
+    "openFromTo": "Open from {opens} to {closes}"
+  },
+  "reserve": {
+    "stepDate": "Pick a date",
+    "stepPax": "How many guests?",
+    "stepTime": "Pick a time",
+    "stepDetails": "Your details",
+    "slotFilled": "That time just filled up. Please pick another.",
+    "loading": "Loading availability"
+  },
+  "date": {
+    "today": "Today"
+  },
+  "pax": {
+    "hint": "Availability changes with the size of your party.",
+    "decrease": "Remove one guest",
+    "increase": "Add one guest",
+    "one": "1 guest",
+    "other": "{count} guests"
+  },
+  "slots": {
+    "empty": "No times left for this day.",
+    "fullDay": "This day is full for your party size. Try another date or fewer guests.",
+    "noRemaining": "Full",
+    "remaining": "{count} left"
+  },
+  "form": {
+    "name": "Name",
+    "nameError": "Enter your name to continue.",
+    "namePlaceholder": "Ana Rodríguez",
+    "phone": "Phone (optional)",
+    "phonePlaceholder": "8888 8888",
+    "notes": "Allergies or notes (optional)",
+    "notesPlaceholder": "No peanuts, a quiet table, we’re celebrating a birthday…",
+    "summary": "Your reservation",
+    "submit": "Confirm reservation",
+    "submitting": "Confirming…"
+  },
+  "success": {
+    "title": "Reservation confirmed",
+    "waiting": "{name}, we’ll see you at {restaurant}.",
+    "date": "Date",
+    "time": "Time",
+    "pax": "Guests",
+    "hint": "Save this screen or take a screenshot. If you need to change anything, write to the restaurant directly.",
+    "another": "Make another reservation"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "organization_not_found": "We couldn’t find this restaurant.",
+    "invalid_customer_name": "Enter your name to continue.",
+    "invalid_pax": "The party size is not valid.",
+    "starts_at_in_the_past": "That time has already passed. Please pick another.",
+    "invalid_starts_at": "That time is not valid. Please pick another.",
+    "outside_hours": "That time is outside opening hours.",
+    "capacity_exceeded": "That time is full. Please pick another.",
+    "invalid_range": "Those dates are not valid.",
+    "range_too_large": "The date range is too wide.",
+    "invalid_timezone": "This restaurant has no timezone configured. We can’t show times."
+  }
+}
