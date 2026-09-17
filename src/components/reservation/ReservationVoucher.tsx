@@ -2,8 +2,7 @@ import type { Ref } from "react"
 
 import { OrganizationLogo } from "@/components/reservation/OrganizationLogo"
 import { useLocale } from "@/i18n/useLocale"
-import { formatPaxLabel } from "@/lib/format"
-import { cn } from "@/lib/utils"
+import { formatPaxLabel, formatReservationCode } from "@/lib/format"
 import type { CreateReservationResponse } from "@/types/reservations"
 
 interface ReservationVoucherProps {
@@ -54,8 +53,7 @@ export function ReservationVoucher({
           />
           <SummaryRow
             term={t("success.reference")}
-            description={reservation.id}
-            descriptionClassName="min-w-0 break-all text-xs"
+            description={formatReservationCode(reservation.id)}
           />
         </dl>
 
@@ -70,18 +68,14 @@ export function ReservationVoucher({
 function SummaryRow({
   term,
   description,
-  descriptionClassName,
 }: {
   term: string
   description: string
-  descriptionClassName?: string
 }) {
   return (
-    <div className="flex items-start justify-between gap-4 px-4 py-3.5">
-      <dt className="shrink-0 text-muted-foreground">{term}</dt>
-      <dd className={cn("text-right font-medium", descriptionClassName)}>
-        {description}
-      </dd>
+    <div className="flex items-center justify-between gap-4 px-4 py-3.5">
+      <dt className="text-muted-foreground">{term}</dt>
+      <dd className="font-medium tabular-nums">{description}</dd>
     </div>
   )
 }
