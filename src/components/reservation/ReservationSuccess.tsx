@@ -11,6 +11,7 @@ import {
   toZonedDateTime,
 } from "@/lib/datetime"
 import { downloadReservationImage } from "@/lib/downloadReservationImage"
+import { formatReservationCode } from "@/lib/format"
 import type { CreateReservationResponse } from "@/types/reservations"
 
 interface ReservationSuccessProps {
@@ -46,7 +47,7 @@ export function ReservationSuccess({
     try {
       await downloadReservationImage(
         node,
-        t("success.fileName", { id: reservation.id })
+        t("success.fileName", { id: formatReservationCode(reservation.id) })
       )
     } catch {
       toast.error(t("success.downloadError"))
