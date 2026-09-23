@@ -100,5 +100,19 @@
     "invalid_range": "Las fechas no son válidas.",
     "range_too_large": "El rango de fechas es demasiado amplio.",
     "invalid_timezone": "Este restaurante no tiene zona horaria configurada. No podemos mostrar horarios."
+  },
+  "footer": {
+    "logoAria": "Ir al inicio — Tabstr",
+    "logoAlt": "Tabstr",
+    "description": "Reservas en línea simples y confiables para negocios de Costa Rica. Tabstr conecta a tus clientes con tu disponibilidad real, en pocos pasos y desde cualquier dispositivo.",
+    "productOf": "Un producto de",
+    "linksTitle": "Links importantes",
+    "navHome": "Inicio",
+    "socialTitle": "Síguenos",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "socialAria": "Tabstr en {platform}",
+    "copyright": "© {year} Tabstr — Booking Tabstr Costa Rica",
+    "poweredBy": "Powered by"
   }
 }
