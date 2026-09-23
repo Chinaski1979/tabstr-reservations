@@ -80,8 +80,13 @@
     "date": "Date",
     "time": "Time",
     "pax": "Guests",
-    "hint": "Save this screen or take a screenshot. If you need to change anything, write to the restaurant directly.",
-    "another": "Make another reservation"
+    "hint": "You can download this voucher. If you need to change anything, write to the restaurant directly.",
+    "another": "Make another reservation",
+    "download": "Download voucher",
+    "downloading": "Preparing…",
+    "downloadError": "We couldn’t generate the voucher. Please try again.",
+    "reference": "Reservation",
+    "fileName": "reservation-{id}.png"
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",

@@ -80,8 +80,13 @@
     "date": "Fecha",
     "time": "Hora",
     "pax": "Personas",
-    "hint": "Guarda esta pantalla o toma una captura. Si necesitas cambiar algo, escribe directamente al restaurante.",
-    "another": "Hacer otra reserva"
+    "hint": "Puedes descargar este comprobante. Si necesitas cambiar algo, escribe directamente al restaurante.",
+    "another": "Hacer otra reserva",
+    "download": "Descargar comprobante",
+    "downloading": "Generando…",
+    "downloadError": "No pudimos generar el comprobante. Intenta de nuevo.",
+    "reference": "Reserva",
+    "fileName": "reserva-{id}.png"
   },
   "errors": {
     "generic": "Algo salió mal. Intenta de nuevo.",
