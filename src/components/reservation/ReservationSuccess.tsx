@@ -1,5 +1,3 @@
-import { Check } from "lucide-react"
-
 import { OrganizationLogo } from "@/components/reservation/OrganizationLogo"
 import { Button } from "@/components/ui/button"
 import { useLocale } from "@/i18n/useLocale"
