@@ -47,7 +47,8 @@
     "loading": "Cargando disponibilidad"
   },
   "date": {
-    "today": "Hoy"
+    "today": "Hoy",
+    "closed": "Cerrado"
   },
   "pax": {
     "hint": "La disponibilidad cambia según el tamaño del grupo.",
@@ -59,6 +60,7 @@
   "slots": {
     "empty": "No quedan horarios para este día.",
     "fullDay": "Este día está lleno para el tamaño de tu grupo. Prueba con otra fecha o con menos personas.",
+    "closedDay": "El restaurante cierra ese día. Elige otra fecha.",
     "noRemaining": "Sin cupo",
     "remaining": "Quedan {count}"
   },
@@ -99,7 +101,8 @@
     "capacity_exceeded": "Ya no hay cupo a esa hora. Elige otro horario.",
     "invalid_range": "Las fechas no son válidas.",
     "range_too_large": "El rango de fechas es demasiado amplio.",
-    "invalid_timezone": "Este restaurante no tiene zona horaria configurada. No podemos mostrar horarios."
+    "invalid_timezone": "Este restaurante no tiene zona horaria configurada. No podemos mostrar horarios.",
+    "closed_day": "Ese día el restaurante está cerrado. Elige otra fecha."
   },
   "footer": {
     "logoAria": "Ir al inicio — Tabstr",

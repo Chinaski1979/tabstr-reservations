@@ -9,6 +9,7 @@ export type ReservationErrorCode =
   | "invalid_range"
   | "range_too_large"
   | "invalid_timezone"
+  | "closed_day"
 
 /** Booked guests for one clock hour, keyed by the UTC instant of the local hour start. */
 export interface OccupancyHour {
@@ -36,6 +37,12 @@ export interface AvailabilityResponse {
   /** null means no cap. */
   maxPaxPerHour: number | null
   occupancy: OccupancyHour[]
+  /**
+   * Local dates `YYYY-MM-DD` (in `timezone`) on which the restaurant is closed
+   * within the requested from/to range. Includes recurring closed weekdays and
+   * point-in-time dates such as holidays. `[]` means no restrictions.
+   */
+  closedDays: string[]
 }
 
 export interface CreateReservationRequest {

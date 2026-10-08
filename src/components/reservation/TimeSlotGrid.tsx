@@ -53,7 +53,7 @@ export function TimeSlotGrid({
   )
 }
 
-function SlotsNotice({ children }: { children: ReactNode }) {
+export function SlotsNotice({ children }: { children: ReactNode }) {
   return (
     <p className="rounded-xl border border-dashed border-border px-4 py-8 text-center text-sm leading-relaxed text-muted-foreground">
       {children}

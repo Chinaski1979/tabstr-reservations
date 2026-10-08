@@ -60,6 +60,7 @@ export const httpReservationsApi: ReservationsApi = {
       closesAt: payload.closesAt,
       maxPaxPerHour: payload.maxPaxPerHour,
       occupancy: payload.occupancy ?? [],
+      closedDays: payload.closedDays ?? [],
     }
   },
 
