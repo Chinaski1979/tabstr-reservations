@@ -12,7 +12,7 @@ import { ReservationForm } from "@/components/reservation/ReservationForm"
 import { ReservationSkeleton } from "@/components/reservation/ReservationSkeleton"
 import { ReservationSuccess } from "@/components/reservation/ReservationSuccess"
 import { StepSection } from "@/components/reservation/StepSection"
-import { TimeSlotGrid } from "@/components/reservation/TimeSlotGrid"
+import { SlotsNotice, TimeSlotGrid } from "@/components/reservation/TimeSlotGrid"
 import {
   AVAILABILITY_WINDOW_DAYS,
   useAvailability,
@@ -49,9 +49,22 @@ export function ReservationPage() {
     [today]
   )
 
+  const closedDates = useMemo(
+    () => new Set(availability?.closedDays ?? []),
+    [availability]
+  )
+  const isSelectedDateClosed =
+    selectedDate !== null && closedDates.has(selectedDate)
+
+  // A reload can turn the selected date into a closed day: its slot is treated
+  // as cleared so it is neither shown nor submitted.
+  const effectiveSelectedStartsAt = isSelectedDateClosed
+    ? null
+    : selectedStartsAt
+
   const slots = useMemo(
     () =>
-      availability && selectedDate
+      availability && selectedDate && !closedDates.has(selectedDate)
         ? buildDaySlots({
             availability,
             date: selectedDate,
@@ -60,13 +73,14 @@ export function ReservationPage() {
             locale: intlLocale,
           })
         : [],
-    [availability, selectedDate, pax, intlLocale]
+    [availability, selectedDate, closedDates, pax, intlLocale]
   )
 
   const selectedSlot =
-    slots.find((slot) => slot.startsAt === selectedStartsAt) ?? null
+    slots.find((slot) => slot.startsAt === effectiveSelectedStartsAt) ?? null
 
   function handleSelectDate(date: string) {
+    if (closedDates.has(date)) return
     setSelectedDate(date)
     setSelectedStartsAt(null)
   }
@@ -91,6 +105,8 @@ export function ReservationPage() {
 
   async function handleSubmit(values: ReservationFormValues) {
     if (!slug || !selectedSlot) return
+    // Never submit a slot whose date became closed after a reload.
+    if (isSelectedDateClosed) return
 
     try {
       const created = await createReservation({
@@ -147,6 +163,7 @@ export function ReservationPage() {
           dates={dates}
           today={today}
           selectedDate={selectedDate}
+          closedDates={closedDates}
           onSelect={handleSelectDate}
         />
       </StepSection>
@@ -161,11 +178,15 @@ export function ReservationPage() {
           title={t("reserve.stepTime")}
           hint={formatLongDate(selectedDate, intlLocale)}
         >
-          <TimeSlotGrid
-            slots={slots}
-            selectedSlot={selectedStartsAt}
-            onSelect={setSelectedStartsAt}
-          />
+          {isSelectedDateClosed ? (
+            <SlotsNotice>{t("slots.closedDay")}</SlotsNotice>
+          ) : (
+            <TimeSlotGrid
+              slots={slots}
+              selectedSlot={effectiveSelectedStartsAt}
+              onSelect={setSelectedStartsAt}
+            />
+          )}
         </StepSection>
       ) : null}
 

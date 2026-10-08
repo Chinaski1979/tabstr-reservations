@@ -29,9 +29,6 @@ informational landing rather than an entry point to a booking.
 | `/:slug`          | Redirects to `/reserve/:slug` for links shared before the move |
 | anything else     | 404                                                 |
 
-Mock slugs to try: `mi-bar` (has a logo), `la-noche` (no logo), `sin-limite`
-(open 24h, logo URL points at a missing file on purpose).
-
 ## Layout
 
 - `src/index.css` — theme tokens (ink background, gold primary, terracotta
@@ -43,7 +40,7 @@ Mock slugs to try: `mi-bar` (has a logo), `la-noche` (no logo), `sin-limite`
 - `src/components/reservation/` — booking flow UI
 - `src/components/ui/` — shadcn components
 - `src/lib/` — date math, slot building, formatting, error copy
-- `src/services/` — the `reservationsApi` contract and its mock implementation
+- `src/services/` — the `reservationsApi` contract and its HTTP implementation
 - `@/` resolves to `src/`
 
 ## Type

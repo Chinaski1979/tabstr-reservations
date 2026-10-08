@@ -13,6 +13,7 @@ const ERROR_KEYS: Record<ReservationErrorCode, MessageKey> = {
   invalid_range: "errors.invalid_range",
   range_too_large: "errors.range_too_large",
   invalid_timezone: "errors.invalid_timezone",
+  closed_day: "errors.closed_day",
 }
 
 export function reservationErrorMessage(

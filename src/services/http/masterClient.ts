@@ -13,6 +13,7 @@ const GUEST_CODES = new Set<string>([
   "capacity_exceeded",
   "invalid_range",
   "range_too_large",
+  "closed_day",
 ])
 
 const SLUG_ALIASES: Record<string, ReservationErrorCode> = {

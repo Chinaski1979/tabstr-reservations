@@ -1,14 +1,8 @@
-function readFlag(value: string | undefined, fallback: boolean): boolean {
-  if (value === undefined || value === "") return fallback
-  return value === "true" || value === "1"
-}
-
 function trimSlash(value: string): string {
   return value.replace(/\/+$/, "")
 }
 
 export const env = {
-  useMock: readFlag(import.meta.env.VITE_USE_MOCK, true),
   masterFunctionsUrl: trimSlash(import.meta.env.VITE_MASTER_FUNCTIONS_URL ?? ""),
   masterAnonKey: (import.meta.env.VITE_MASTER_ANON_KEY ?? "").trim(),
 }

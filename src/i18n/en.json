@@ -47,7 +47,8 @@
     "loading": "Loading availability"
   },
   "date": {
-    "today": "Today"
+    "today": "Today",
+    "closed": "Closed"
   },
   "pax": {
     "hint": "Availability changes with the size of your party.",
@@ -59,6 +60,7 @@
   "slots": {
     "empty": "No times left for this day.",
     "fullDay": "This day is full for your party size. Try another date or fewer guests.",
+    "closedDay": "The restaurant is closed on that day. Pick another date.",
     "noRemaining": "Full",
     "remaining": "{count} left"
   },
@@ -99,7 +101,8 @@
     "capacity_exceeded": "That time is full. Please pick another.",
     "invalid_range": "Those dates are not valid.",
     "range_too_large": "The date range is too wide.",
-    "invalid_timezone": "This restaurant has no timezone configured. We can’t show times."
+    "invalid_timezone": "This restaurant has no timezone configured. We can’t show times.",
+    "closed_day": "The restaurant is closed on that day. Please pick another date."
   },
   "footer": {
     "logoAria": "Go to home — Tabstr",
